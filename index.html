@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="Flux-Sculptor">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG"> -->
@@ -34,8 +35,7 @@
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/juxtapose.css">
   <link rel="stylesheet" href="./static/css/tab_gallery.css">
@@ -46,19 +46,19 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
-
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop" style="max-width: 1200px;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
-            <span style="background: linear-gradient(to right, skyblue, blue, indigo, blue, skyblue); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-              Flux-Sculptor
-            </span>
-            <br> Rich-Attribute Text-Driven Portrait Editing through Decomposed Spatial Flow Control
+            <h1 class="title is-2 publication-title">
+              <span
+                style="background: linear-gradient(to right, rgb(167, 112, 239), rgb(207, 139, 243), rgb(253, 185, 155)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Flux-Sculptor:
+              </span>
+              Text-Driven Rich-Attribute Portrait Editing through Decomposed Spatial Flow Control
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -69,250 +69,297 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="hero is-small">  
-  <div class="hero-body">
-    <div class="container">
-        <div style="text-align: center;">
-          <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
-        </div>
     </div>
-  </div>
+  </section>
 
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <style>
-            .custom-line-height p {
-              line-height: 1.8; /* 修改此值以调整行间距 */
-            }
-          </style>
-          <div class="custom-line-height">
-          <p>
-            Text-driven portrait editing technologies exhibit broad application prospects together with great challenges. Existing works struggle to keep a good balance between reconstruction fidelity and editing flexibility. To clearly formulate the problem, we claim that an ideal text-driven portrait edit should have precise editing localization and appropriate content modification. To achieve these criteria, we propose Flux-Sculptor, a Flux-based framework for precise text-driven portrait editing. Our framework uses a Prompt-Aligned Spatial Locator (PASL) to identify relevant editing regions and a Structure-to-Detail Edit Control (S2D-EC) strategy to spatially guide the denoising process via sequential mask-guided fusion on latent and attention value. Extensive experiments show that Flux-Sculptor outperforms existing methods in both rich-attribute editing and facial information preserving, making it a powerful candidate for the practical portrait editing application.
-          </p>
-        </div>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div style="text-align: center">
+          <img src="static/images/teaser2.png" alt="MY ALT TEXT" />
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h2 class="title is-4">Different attributes face editing using Flux-Sculptor</h2>
-      <div class="content has-text-justified">
-        <p>
-
-          <b>Text-based portrait editing results of Flux-Sculptor. </b> We apply eight text prompts focusing on different attributes to edit two central portraits. As shown, our method effectively follows the text prompts to achieve diverse attribute modifications while maintaining visual harmony, naturalness, and identity preservation.
-          <br> 
-        </p>
-      </div>
-      <!-- The expanding image container -->
-      <div class="tab_container">
-        <!-- Close the image -->
-        <!-- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> -->
-
-        <!-- Expanded image -->
-        <div id="juxtapose-embed" data-startingposition="30%" data-animate="true">
-        </div>
-
-        <div>
-          <div id="juxtapose-hidden"></div>
-        </div>
-        
-        <!-- Image text -->
-        <div id="imgtext"></div>
-      </div>
-
-      <!-- The grid: four columns -->
-      <div class="tab_row">
-        <div class="tab_column">
-          <img src="./static/images/101_edit.png"  onclick="tab_gallery_click('101');">
-        </div>
-        <div class="tab_column">
-          <img src="./static/images/101_edit.png" onclick="tab_gallery_click('101');">
-       
-      </div>
-
-      
-      
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-small">  
-  <div class="hero-body ">
-    
-    <div class="container is-max-desktop has-text-centered">
-      <h3 class="title is-4">Flux-Sculptor pipeline </h3>
-        <div style="text-align: center;">
-          <img src="static/images/framework.png" alt="MY ALT TEXT"/>
-        </div>
-    </div>
-    
-  </div>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h3 class="title is-4">Flux-Sculptor can achieve good performance comparing with other methods</h3>
-      <div class="content has-text-justified">
-        <p>
-          <!--<b>A large 1B-parameter GAN model for text-to-image, with a competitive FID, disentangled latent space, and a fast upsampler for generating 4K outputs.</b>--> 
-        </p>
-      </div>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-t2i0">
-          <img id="myt2i0" src="./static/images/visualization.png"
-          class="interpolation-image"/>
-        </div>
-        <div class="item item-t2i0">
-          <img id="myt2i0" src="./static/images/mask_strategies.png"
-          class="interpolation-image"/>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-
-<!
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <!-- Paper abstract -->
+    <section class="section hero ">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <style>
+                .custom-line-height p {
+                  line-height: 1.8;
+                  /* 修改此值以调整行间距 */
+                }
+              </style>
+              <div class="custom-line-height">
+                <p>
+                  Text-driven portrait editing holds significant potential for various applications
+                  but also presents considerable challenges. An ideal text-driven portrait editing approach
+                  should achieve <b>precise localization</b> and <b>appropriate content modification</b>, yet
+                  existing methods struggle to balance reconstruction fidelity and editing flexibility.
+                  To address this issue, we propose Flux-Sculptor, a flux-based framework designed for
+                  precise text-driven portrait editing. Our framework introduces a Prompt-Aligned Spatial
+                  Locator (PASL) to accurately identify relevant editing regions and a Structure-to-Detail
+                  Edit Control (S2D-EC) strategy to spatially guide the denoising process through sequential
+                  mask-guided fusion of latent representations and attention values. Extensive experiments
+                  demonstrate that Flux-Sculptor surpasses existing methods in rich-attribute editing and
+                  facial information preservation, making it a strong candidate for practical portrait
+                  editing applications.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
 
-  <!-- Image Slider Javascripts -->
-  <!--=================Functions==========================-->
-<script src="static/js/juxtapose.js"></script>
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h2 class="title is-4">Text-Based Portrait Editing Results of Flux-Sculptor</h2>
+          <div class="content has-text-justified">
+            <p>
+              Flux-Sculptor can faithfully follow the text prompts to achieve diverse facial attribute 
+              modifications, while maintaining strong visual harmony, naturalness, and identity preservation. 
+              10 text-driven portrait editing results are shown below.
+              <br>
+              <br>
+            </p>
+          </div>
+          <!-- The expanding image container -->
+          <div class="tab_container">
+            <!-- Expanded image -->
+            <div id="imgtext" class="gallery-description">"A woman." -> "A woman with <span class='highlight-red'>straight and purple hair</span>."</div>
+            <div id="juxtapose-embed" data-startingposition="30%" data-animate="true">
+            </div>
 
-<script>
-  var slider;
-  let origImages = [
-    {"src": "static/images/101.png", "label": "Source Face Image",},
-    {"src": "static/images/101_edit.png", "label": "Generated by Flux-Sculptor",}
-  ];
-  let origOptions = {
-      "makeResponsive": true,
-      "showLabels": true,
-      "mode": "horizontal",
-      "showCredits": true,
-      "animate": true,
-      "startingPosition": "50"
-  };
-  
-  const juxtaposeSelector = "#juxtapose-embed";
-  const transientSelector = "#juxtapose-hidden";
-  
-  
-  function tab_gallery_click(name) {
-    // Get the expanded image
-    let inputImage = {
-      label: "Source Image",
-    };
-    let outputImage = {
-      label: "Flux-Sculptor",
-    };
-  
-    inputImage.src = "./static/images/".concat(name, ".png")
-    outputImage.src = "./static/images/".concat(name, "_edit.png")
-  
-    let images = [inputImage, outputImage];
-    let options = slider.options;
-    options.callback = function(obj) {
-        var newNode = document.getElementById(obj.selector.substring(1));
-        var oldNode = document.getElementById(juxtaposeSelector.substring(1));
-        console.log(obj.selector.substring(1));
-        console.log(newNode.children[0]);
-        oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
-        //newNode.removeChild(newNode.children[0]);
-        
-    };
-    
-    slider = new juxtapose.JXSlider(transientSelector, images, options);
-  };
-  
-  
-  
-  (function() {
-      slider = new juxtapose.JXSlider(
+            <div>
+              <div id="juxtapose-hidden"></div>
+            </div>
+          </div>
+
+          <!-- The grid: four columns -->
+          <div class="tab_row">
+            <div class="tab_column">
+              <img src="./static/images/example1_before.png" onclick="tab_gallery_click('example1');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example2_before.png" onclick="tab_gallery_click('example2');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example3_before.png" onclick="tab_gallery_click('example3');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example4_before.png" onclick="tab_gallery_click('example4');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example5_before.png" onclick="tab_gallery_click('example5');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example6_before.png" onclick="tab_gallery_click('example6');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example7_before.png" onclick="tab_gallery_click('example7');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example8_before.png" onclick="tab_gallery_click('example8');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example9_before.png" onclick="tab_gallery_click('example9');">
+            </div>
+            <div class="tab_column">
+              <img src="./static/images/example10_before.png" onclick="tab_gallery_click('example10');">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h3 class="title is-4">Comparison with State-of-the-Art Editing Methods</h3>
+          <div class="content has-text-justified">
+            <p>
+              Flux-Sculptor outperforms GAN, Diffusion and Rectified Flow-based competitors on both editing and preservation-related metrics.
+            </p>
+          </div>
+          <div class="subtitle-description">Quantitative Performance</div>
+          <br>
+          <img src="static/images/metrics.png" alt="EVALUATION" />
+          <br>
+          <div class="subtitle-description2">Qualitative Visualization</div>
+          <br>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-t2i0">
+              <img id="myt2i0" src="./static/images/visualize1.png" class="interpolation-image" />
+            </div>
+            <div class="item item-t2i0">
+              <img id="myt2i0" src="./static/images/visualize2.png" class="interpolation-image" />
+            </div>
+            <div class="item item-t2i0">
+              <img id="myt2i0" src="./static/images/visualize3.png" class="interpolation-image" />
+            </div>
+            <div class="item item-t2i0">
+              <img id="myt2i0" src="./static/images/visualize4.png" class="interpolation-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h3 class="title is-4">Extra Highlights</h3>
+          <div class="content has-text-justified">
+            <p>
+              Flux-Sculptor possesses extra highlights: 
+              1) Open-set text-driven facial localization;
+              2) Flexible gender-biased attribute editing; 
+              3) Customized mask-guided portrait editing;
+              4) Multi-attribute portrait editing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div style="text-align: center">
+            <img src="static/images/highlight.png" alt="MY ALT TEXT" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+                <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Image Slider Javascripts -->
+    <!--=================Functions==========================-->
+    <script src="static/js/juxtapose.js"></script>
+
+    <script>
+      const EXAMPLE_DESCRIPTIONS = {
+        example1: "\"A woman.\" -> \"A woman with <span class='highlight-red'>straight and purple hair</span>.\"",
+        example2: "\"A woman.\" -> \"A <span class='highlight-red'>smiling</span> woman.\"",
+        example3: "\"A girl with <span class='highlight-red'><s>bangs</s></span>.\" -> A girl with <span class='highlight-red'>bushy eyebrows</span> and <span class='highlight-red'>light lipstick</span>.\"",
+        example4: "\"A woman.\" -> \"A woman with <span class='highlight-red'>slim lower face</span>.\"",
+        example5: "\"A woman.\" -> \"A woman with <span class='highlight-red'>pink eyeshadows</span>.\"",
+        example6: "\"A man.\" -> \"A man wearing <span class='highlight-red'>glasses</span>.\"",
+        example7: "\"A man.\" -> \"A man with <span class='highlight-red'>goatee beard</span>.\"",
+        example8: "\"A man.\" -> \"A man with <span class='highlight-red'>goatee beard</span>.\"",
+        example9: "\"A man.\" -> \"A man with <span class='highlight-red'>blond hair</span>.\"",
+        example10: "\"A man.\" -> \"A man with <span class='highlight-red'>chubby face</span>.\"",
+      };
+
+      var slider;
+      let origImages = [
+        { "src": "static/images/example1_before.png", "label": "Source Portrait", },
+        { "src": "static/images/example1_after.png", "label": "Generated by Flux-Sculptor", },
+      ];
+      let origOptions = {
+        "makeResponsive": true,
+        "showLabels": true,
+        "mode": "horizontal",
+        "showCredits": true,
+        "animate": true,
+        "startingPosition": "50"
+      };
+
+      const juxtaposeSelector = "#juxtapose-embed";
+      const transientSelector = "#juxtapose-hidden";
+
+      function tab_gallery_click(name) {
+        const imgText = document.getElementById("imgtext");
+        imgText.textContent = EXAMPLE_DESCRIPTIONS[name] || "Generated by Flux-Sculptor";
+        // Get the expanded image
+        let inputImage = {
+          src: `./static/images/${name}_before.png`,
+          label: "Source Portrait",
+        };
+        let outputImage = {
+          src: `./static/images/${name}_after.png`,
+          label: "Generated by Flux-Sculptor",
+        };
+
+        inputImage.src = "./static/images/".concat(name, "_before.png")
+        outputImage.src = "./static/images/".concat(name, "_after.png")
+
+        let images = [inputImage, outputImage];
+        let options = slider.options;
+        options.callback = function (obj) {
+          var newNode = document.getElementById(obj.selector.substring(1));
+          var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+          console.log(obj.selector.substring(1));
+          console.log(newNode.children[0]);
+          oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+        };
+
+        slider = new juxtapose.JXSlider(transientSelector, images, options);
+        // const imgText = document.getElementById("imgtext");
+        imgText.innerHTML = EXAMPLE_DESCRIPTIONS[name] || "Generated by Flux-Sculptor";
+        // 确保以下原有代码存在
+      };
+
+      (function () {
+        // slider = new juxtapose.JXSlider(
+        //   juxtaposeSelector, origImages, origOptions);
+        slider = new juxtapose.JXSlider(
           juxtaposeSelector, origImages, origOptions);
-      //document.getElementById("left-button").onclick = replaceLeft;
-      //document.getElementById("right-button").onclick = replaceRight;
-  })();
-    // Get the image text
-    var imgText = document.getElementById("imgtext");
-    // Use the same src in the expanded image as the image being clicked on from the grid
-    // expandImg.src = imgs.src;
-    // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = name;
-    // Show the container element (hidden with CSS)
-    // expandImg.parentElement.style.display = "block";
-  
-  $(".flip-card").click(function() {
-              console.log("fading in")
-              div_back = $(this).children().children()[1]
-              div_front = $(this).children().children()[0]
-              // console.log($(this).children("div.flip-card-back"))
-              console.log(div_back)
-              $(div_front).addClass("out");
-              $(div_front).removeClass("in");
-  
-              $(div_back).addClass("in");
-              $(div_back).removeClass("out");
-  
-  });
-  
-  $(".flip-card").mouseleave(function() {
-              console.log("fading in")
-              div_back = $(this).children().children()[1]
-              div_front = $(this).children().children()[0]
-              // console.log($(this).children("div.flip-card-back"))
-              console.log(div_back)
-              $(div_front).addClass("in");
-              $(div_front).removeClass("out");
-  
-              $(div_back).addClass("out");
-              $(div_back).removeClass("in");
-  
-  });
-  
-  </script>
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+      })();
+      // Get the image text
+      var imgText = document.getElementById("imgtext");
+      imgText.innerHTML = exampleDescriptions[name];
+      $(".flip-card").click(function () {
+        console.log("fading in")
+        div_back = $(this).children().children()[1]
+        div_front = $(this).children().children()[0]
+        console.log(div_back)
+        $(div_front).addClass("out");
+        $(div_front).removeClass("in");
 
-    <!-- End of Statcounter Code -->
+        $(div_back).addClass("in");
+        $(div_back).removeClass("out");
 
-  </body>
-  </html>
+      });
+
+      $(".flip-card").mouseleave(function () {
+        console.log("fading in")
+        div_back = $(this).children().children()[1]
+        div_front = $(this).children().children()[0]
+        console.log(div_back)
+        $(div_front).addClass("in");
+        $(div_front).removeClass("out");
+        $(div_back).addClass("out");
+        $(div_back).removeClass("in");
+      });
+    </script>
+</body>
+
+</html>
